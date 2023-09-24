@@ -1,0 +1,4 @@
+pathfinder
+*.o
+valgrind.log
+*.pdf
