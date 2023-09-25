@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-Wall -g
-OBJECTS=labyrinth.o main.o
+OBJECTS=labyrinth.o main.o dlinkedlist.o
 
 all: pathfinder
 

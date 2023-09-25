@@ -89,6 +89,11 @@ Labyrinth* read_labyrinth(FILE* f) {
 void labyrinth_print(const Labyrinth* l, FILE* f) {
     for(int j=0; j < l->height; ++j) {
         for(int i=0; i < l->width; ++i) {
+            printf("\n x:%d y:%d width:%d height:%d\n",i,j, l->width, l->height);
+//            printf("\n is_wall %d",l->is_wall[i,j]);
+//            printf("\n start_x %d",l->start.x);
+//            printf("\n target_x %d",l->target.x);
+            
             if(l->is_wall[i][j]){
                 fprintf(f, "+");
             }
@@ -102,6 +107,12 @@ void labyrinth_print(const Labyrinth* l, FILE* f) {
                 fprintf(f, " ");
             }
         }
+        printf("\n post loop fault");
+        
         fprintf(f, "\n");
+        printf("\n post file stream");
+        
     }
+    printf("\n post post loop fault");
+    
 }

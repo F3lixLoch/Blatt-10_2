@@ -43,8 +43,10 @@ int count_steps(const Labyrinth* l) {
     const int n_directions = 4;
     Position moves[] = { {-1, 0}, {1, 0}, {0, -1}, {0, 1} };
 
-
+    printf("blob");
     DList* nodes = create_dlist();
+
+  
 
 
     for (int x = 0; x < l->width; ++x) {
@@ -103,7 +105,11 @@ int main(void) {
         fprintf(stderr, "Fehler: Konnte Eingabe nicht lesen.\n");
         return 1;
     }
+    printf("blob1");
+    
     labyrinth_print(l, stdout);
+
+    printf("blob2");
 
     printf(RESULT_MSG, l->start.x, l->start.y, l->target.x, l->target.y, count_steps(l));
 
